@@ -1,0 +1,15 @@
+{
+    "name": "hello-world",
+    "description": "Hello World for Azure",
+    "version": "1.0.0",
+    "private": true,
+    "license": "MIT",
+    "author": "Ryan",
+    "scripts": {
+        "start": "node index.js"
+    },
+    "dependencies": {
+        "express": "^4.17.1",
+        "express-handlebars": "^5.3.4"
+    }
+}
