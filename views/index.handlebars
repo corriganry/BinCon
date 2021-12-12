@@ -5,16 +5,18 @@
         <link rel="stylesheet" type="text/css" href="styling/index.css"/>
     </head>
     <body>
+        <form action="/" method="post">
         <div id="Input1" class = 'center'>
             <input type = 'text' id = 'textbox' class = 'center textbox' placeholder="Enter number to convert" name="Input1">
          </div>
         <div id="Output1" class = 'center'>
-            <input type = 'text' id = 'outbox' class = 'center textbox' name="Output1" disabled="disabled">
+            <input type = 'text' id = 'outbox' value="{{OutBox}}" class = 'center textbox' name="Output1" disabled="disabled"></input>
          </div>
     </div>
     <div id="submitButton" class = 'center'>
-        <button onclick="convert()" id="butt">Convert</button>
+        <button id="butt" type="submit">Convert</button>
     </div>
+    </form>
         <script>
             function convert() {
             const number1 = parseInt(document.getElementById("textbox").value)
@@ -23,5 +25,5 @@
             }
         </script>
     </body>
+    </div>
 </html>
-</div>
