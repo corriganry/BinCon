@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<div class="div_view">
+    <head>
+        <link rel="stylesheet" type="text/css" href="styling/index.css"/>
+    </head>
+    <body>
+        <form action="/conversion" method="post" id="enter">
+        <div id="Input1" class = 'center'>
+            <input type = 'text' id = 'textbox' class = 'center textbox' placeholder="Enter number to convert" name="me">
+         </div>
+        <div id="Output1" class = 'center'>
+            <input type = 'text' id = 'outbox' value="{{OutBox}}" class = 'center textbox' name="Output1" disabled="disabled"></input>
+         </div>
+    </div>
+    <div id="submitButton" class = 'center'>
+        <button id="butt" type="submit">Convert</button>
+    </div>
+    </form>
+        <script>
+            function convert() {
+            const number1 = parseInt(document.getElementById("textbox").value)
+            const result = number1.toString(2);
+            document.getElementById("outbox").value = result
+            }
+        </script>
+    </body>
+    </div>
+</html>

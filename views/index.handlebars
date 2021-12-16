@@ -5,9 +5,9 @@
         <link rel="stylesheet" type="text/css" href="styling/index.css"/>
     </head>
     <body>
-        <form action="/" method="post">
+        <form action="/" method="post" id="enter">
         <div id="Input1" class = 'center'>
-            <input type = 'text' id = 'textbox' class = 'center textbox' placeholder="Enter number to convert" name="Input1">
+            <input type = 'text' id = 'textbox' value="{{TextBox}}" class = 'center textbox' placeholder="Enter number to convert" name="me"></input>
          </div>
         <div id="Output1" class = 'center'>
             <input type = 'text' id = 'outbox' value="{{OutBox}}" class = 'center textbox' name="Output1" disabled="disabled"></input>
@@ -17,6 +17,40 @@
         <button id="butt" type="submit">Convert</button>
     </div>
     </form>
+
+    <div class='center' id="teamsTable">
+        <table>
+
+            <thead>
+                <tr>
+                    <th>Decimal</th>
+                </tr>
+            </thead>
+
+            {{#each numbers}}
+                <tr>
+                    <td>{{this}}</td>
+                </tr>
+            {{/each}}
+
+        </table>
+        <table>
+
+            <thead>
+                <tr>
+                    <th>Binary</th>
+                </tr>
+            </thead>
+
+            {{#each binary}}
+                <tr>
+                    <td>{{this}}</td>
+                </tr>
+            {{/each}}
+
+        </table>
+    </div>
+
         <script>
             function convert() {
             const number1 = parseInt(document.getElementById("textbox").value)
